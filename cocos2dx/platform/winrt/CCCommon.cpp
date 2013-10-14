@@ -49,8 +49,14 @@ void CCLog(const char * pszFormat, ...)
 
     WCHAR wszBuf[MAX_LEN] = {0};
     MultiByteToWideChar(CP_UTF8, 0, szBuf, -1, wszBuf, sizeof(wszBuf));
-    OutputDebugStringW(wszBuf);
-    OutputDebugStringW(L"\n");
+
+#if defined(COCOS2D_DEBUG)
+	OutputDebugStringW(wszBuf);
+	OutputDebugStringW(L"\n");
+#endif
+
+
+    
 
     WideCharToMultiByte(CP_ACP, 0, wszBuf, sizeof(wszBuf), szBuf, sizeof(szBuf), NULL, FALSE);
     printf("%s\n", szBuf);
@@ -91,8 +97,11 @@ void CCLuaLog(const char *pszMsg)
     memset(widebuff, 0, sizeof(WCHAR) * (bufflen + 1));
     MultiByteToWideChar(CP_UTF8, 0, pszMsg, -1, widebuff, bufflen);
 
-    OutputDebugStringW(widebuff);
-    OutputDebugStringA("\n");
+#if defined(COCOS2D_DEBUG)
+	OutputDebugStringW(widebuff);
+	OutputDebugStringA("\n");
+#endif
+
 
 	bufflen = WideCharToMultiByte(CP_ACP, 0, widebuff, -1, NULL, 0, NULL, NULL);
 	char* buff = new char[bufflen + 1];

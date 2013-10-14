@@ -72,7 +72,7 @@ int CCApplication::run()
     {
         return 0;
     }
-
+	Windows::Graphics::Display::DisplayProperties::AutoRotationPreferences=Windows::Graphics::Display::DisplayProperties::CurrentOrientation;
 	CCEGLView::sharedOpenGLView()->Run();
 	return 0;
  #if 0

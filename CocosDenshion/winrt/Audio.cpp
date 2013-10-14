@@ -60,7 +60,8 @@ void  _stdcall AudioEngineCallbacks::OnCriticalError(HRESULT Error)
 
 Audio::Audio() :
     m_backgroundID(0),
-	m_backgroundMusicVolume(1.0f)
+	m_backgroundMusicVolume(1.0f),
+	m_soundEffctVolume(1.0f)
 
 {
 }

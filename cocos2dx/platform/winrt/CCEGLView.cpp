@@ -231,7 +231,7 @@ void DirectXView::OnPointerWheelChanged(CoreWindow^ sender, PointerEventArgs^ ar
     CCEGLView::sharedOpenGLView()->handleTouchesBegin(1, &id, &p.x, &p.y);
     p.y += direction;
     CCEGLView::sharedOpenGLView()->handleTouchesMove(1, &id, &p.x, &p.y);
-    CCEGLView::sharedOpenGLView()->handleTouchesEnd(1, &id, &p.x, &p.y);
+    //CCEGLView::sharedOpenGLView()->handleTouchesEnd(1, &id, &p.x, &p.y);
 }
 
 
