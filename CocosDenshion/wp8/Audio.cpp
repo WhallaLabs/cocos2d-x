@@ -526,7 +526,7 @@ void Audio::PreloadSoundEffect(const char* pszFilePath, bool isMusic)
             &(mediaStreamer.GetOutputWaveFormatEx()), 0, 1.0f, &m_voiceContext, &sends, nullptr)
         );
 		//fix bug: set a initial volume
-		m_soundEffects[sound].m_soundEffectSourceVoice->SetVolume(m_soundEffctVolume);
+		//m_soundEffects[sound].m_soundEffectSourceVoice->SetVolume(m_soundEffctVolume);
     }
 
 	m_soundEffects[sound].m_soundEffectSampleRate = mediaStreamer.GetOutputWaveFormatEx().nSamplesPerSec;
