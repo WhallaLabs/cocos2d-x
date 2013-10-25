@@ -26,6 +26,7 @@
     <XapOutputs>true</XapOutputs>
     <XapFilename>HelloCpp_$(Configuration)_$(Platform).xap</XapFilename>
     <WinMDAssembly>true</WinMDAssembly>
+    <ProjectName>HelloCpp</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

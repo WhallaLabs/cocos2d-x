@@ -35,7 +35,6 @@ THE SOFTWARE.
 @brief    This function change the PVRFrame show/hide setting in register.
 @param  bEnable If true show the PVRFrame window, otherwise hide.
 */
-
 NS_CC_BEGIN
 
 // sharedApplication pointer
